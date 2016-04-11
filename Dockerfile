@@ -7,6 +7,6 @@ RUN apk add --update nginx php-fpm php php-xml php-mysql php-json php-zlib php-d
 COPY files/etc/php /etc/php
 COPY files/start.sh /start.sh
 
-RUN chown -R nginx:www-data /web && chown -R nginx /var/lib/nginx  && chmod +x /start.sh
+RUN chown -R nginx:www-data /web && chown -R nginx /var/lib/nginx && chmod +x /start.sh
 
 CMD ["/start.sh"]
