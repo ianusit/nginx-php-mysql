@@ -2,7 +2,7 @@ FROM alpine:3.3
 
 MAINTAINER Ianus IT GmbH <info@ianus-it.de>
 
-RUN apk add --update nginx php-fpm php php-xml php-mysql php-json php-zlib php-dom &&\
+RUN apk add --update nginx php-fpm php php-xml php-mysql php-json php-zlib php-dom php-phar &&\
     mkdir -p /tmp/nginx/client-body &&\
     mkdir /web &&\
     rm -rf /var/cache/apk/* 
