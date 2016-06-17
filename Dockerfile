@@ -7,7 +7,7 @@ RUN apk add --update nginx php5-fpm php5 php5-xml php5-mysql php5-json php5-zlib
     mkdir /web &&\
     rm -rf /var/cache/apk/* 
 
-COPY files/etc/php /etc/php
+COPY files/etc/php /etc/php5
 COPY files/start.sh /start.sh
 
 RUN chown -R nginx:www-data /web &&\
