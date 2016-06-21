@@ -6,11 +6,11 @@ keepalive_timeout 60;
 gzip off;
 
 root /web;
-index index.html;
+index index.php;
 disable_symlinks off;
 
 location / {
-try_files $uri $uri/ index.html;
+try_files $uri $uri/ index.php;
 }
 
 location ~ [^/]\.php(/|$) {
