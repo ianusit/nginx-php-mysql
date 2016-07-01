@@ -2,7 +2,7 @@ server {
 listen [::]:80 ipv6only=on;
 listen 80;
 server_name SERVERNAME;
-rewrite ^ https://SERVERNAME$uri permanent;
+return 301 https://SERVERNAME$request_uri;
 keepalive_timeout 60;
 }
 
