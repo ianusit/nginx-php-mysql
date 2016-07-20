@@ -59,8 +59,8 @@ expires 30d;
 access_log off;
 }
 
-ssl_certificate /certs/fullchain1.pem;
-ssl_certificate_key /certs/privkey1.pem;
+ssl_certificate /certs/fullchain2.pem;
+ssl_certificate_key /certs/privkey2.pem;
 ssl_protocols TLSv1.2;
 ssl_dhparam /dh/dhparam.pem;
 ssl_ecdh_curve secp384r1;
