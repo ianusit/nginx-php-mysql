@@ -59,8 +59,8 @@ expires 30d;
 access_log off;
 }
 
-ssl_certificate /certs/SSLCERT;
-ssl_certificate_key /certs/SSLKEY;
+ssl_certificate SSLCERT;
+ssl_certificate_key SSLKEY;
 ssl_protocols TLSv1.2;
 ssl_dhparam /dh/dhparam.pem;
 ssl_ecdh_curve secp384r1;
