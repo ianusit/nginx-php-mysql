@@ -2,6 +2,7 @@ server {
 listen [::]:80 ipv6only=on;
 listen 80;
 server_name SERVICENAME;
+server_tokens off;
 return 301 https://SERVICENAME$request_uri;
 keepalive_timeout 60;
 }
@@ -10,6 +11,7 @@ server {
 listen [::]:443 ssl ipv6only=on;
 listen 443 ssl;
 server_name SERVICENAME;
+server_tokens off;
 keepalive_timeout 60;
 gzip off;
 
