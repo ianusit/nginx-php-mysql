@@ -20,7 +20,7 @@ client_max_body_size 10G; # set max upload size
 fastcgi_buffers 64 4K;
 
 index index.php;
-try_files $uri $uri/ /index.php?$args;
+try_files $uri $uri/ /index.php$is_args$args;
 error_page 403 /core/templates/403.php;
 error_page 404 /core/templates/404.php;
 
