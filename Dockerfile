@@ -1,13 +1,13 @@
-FROM alpine:3.5
+FROM alpine:3.9
 
 MAINTAINER Ianus IT GmbH <info@ianus-it.de>
 
-RUN apk add --update nginx nginx-mod-http-headers-more php5-fpm php5 php5-xml php5-mysql php5-json php5-zlib php5-dom php5-phar php5-curl php5-xmlrpc php5-soap php5-openssl &&\
-    mkdir -p /tmp/nginx/client-body &&\
+RUN apk add --update ca-certificates openssl nginx nginx-mod-http-headers-more &&\
+    apk add --update-cache --repository http://dl-3.alpinelinux.org/alpine/v3.9/community/ php7 php7-fpm php7-xml php7-json php7-zlib php7-dom php7-phar php7-curl php7-xmlrpc php7-soap php7-openssl php7-mysqli php7-mysqlnd &&\
     mkdir /web &&\
-    rm -rf /var/cache/apk/*
+    rm -rf /var/cache/apk/*                                                                                
 
-COPY files/etc/php /etc/php5
+COPY files/etc/php /etc/php7
 COPY files/etc/nginx /etc/nginx
 COPY files/start.sh /start.sh
 
