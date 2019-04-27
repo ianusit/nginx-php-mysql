@@ -3,7 +3,7 @@ FROM alpine:3.9
 MAINTAINER Ianus IT GmbH <info@ianus-it.de>
 
 RUN apk add --update ca-certificates openssl nginx nginx-mod-http-headers-more &&\
-    apk add --update-cache --repository http://dl-3.alpinelinux.org/alpine/v3.9/community/ php7 php7-fpm php7-xml php7-json php7-zlib php7-dom php7-phar php7-curl php7-xmlrpc php7-soap php7-openssl php7-mysqli php7-mysqlnd &&\
+    apk add --update-cache --repository http://dl-3.alpinelinux.org/alpine/v3.9/community/ php7 php7-fpm php7-xml php7-json php7-zlib php7-dom php7-phar php7-curl php7-xmlrpc php7-soap php7-openssl php7-mbstring php7-mysqli php7-mysqlnd &&\
     mkdir /web &&\
     rm -rf /var/cache/apk/*                                                                                
 
