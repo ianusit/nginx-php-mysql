@@ -7,7 +7,7 @@ RUN apk add --update ca-certificates openssl nginx nginx-mod-http-headers-more &
     mkdir /web &&\
     rm -rf /var/cache/apk/*                                                                                
 
-COPY files/etc/php /etc/php7
+COPY files/etc/php7 /etc/php7
 COPY files/etc/nginx /etc/nginx
 COPY files/start.sh /start.sh
 
